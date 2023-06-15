@@ -23,12 +23,6 @@ class BlogPost < ApplicationRecord
 
   # before_validation :set_slug
 
-  # scope :published, -> { where.not(published_at: nil) }
-
-  # def published?
-  #   published_at.present?
-  # end
-
   # private
 
   # def set_slug
