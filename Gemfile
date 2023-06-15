@@ -44,6 +44,7 @@ gem "bootsnap", require: false
 
 # Use Sass to process CSS
 # gem "sassc-rails"
+gem 'faker', '~> 2.18.0'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem "image_processing", "~> 1.2"
@@ -56,7 +57,6 @@ group :development, :test do
   gem 'shoulda-matchers', '~> 5.0'
   gem 'rails-controller-testing', '~> 1.0.5'
   gem 'simplecov', require: false
-  gem 'faker', '~> 2.18.0'
 end
 
 group :development do
