@@ -38,3 +38,5 @@
 !/app/assets/builds/.keep
 
 coverage
+coverage/index.html
+coverage/.resultset.json
