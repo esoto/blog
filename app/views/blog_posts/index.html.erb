@@ -5,6 +5,17 @@
 <table>
     <% @blog_posts.each do |blog_post| %>
         <tr>
+            <% if user_signed_in? %>
+                <td>
+                    <% if blog_post.draft? %>
+                        <div class="p-2 rounded bg-gray-100 text-gray-900">Draft</div>
+                    <% elsif blog_post.scheduled? %>
+                        <div class="p-2 rounded bg-blue-100 text-blue-900">Scheduled</div>
+                    <% elsif blog_post.published? %>
+                        <div class="p-2 rounded bg-green-100 text-green-900">Published</div>
+                    <% end %>
+                </td>
+            <% end %>
             <td><%= link_to blog_post.title, blog_post %></td>
             <td><%= blog_post.body %></td>
             <td><%= link_to 'Edit Blog Post', edit_blog_post_path(blog_post) if user_signed_in? %></td>
