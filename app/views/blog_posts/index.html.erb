@@ -17,7 +17,7 @@
                 </td>
             <% end %>
             <td><%= link_to blog_post.title, blog_post %></td>
-            <td><%= blog_post.body %></td>
+            <td><%= blog_post.content %></td>
             <td><%= link_to 'Edit Blog Post', edit_blog_post_path(blog_post) if user_signed_in? %></td>
         </tr>
     <% end %>
