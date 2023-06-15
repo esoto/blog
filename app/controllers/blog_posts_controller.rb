@@ -4,7 +4,8 @@ class BlogPostsController < ApplicationController
   before_action :set_blog_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @blog_posts = user_signed_in? ? BlogPost.sorted : BlogPost.published.sorted
+    blog_posts = user_signed_in? ? BlogPost.sorted : BlogPost.published.sorted
+    @pagy, @records = pagy(blog_posts)
   end
 
   def show; end

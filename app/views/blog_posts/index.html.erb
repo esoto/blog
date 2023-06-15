@@ -3,7 +3,7 @@
 <%= link_to 'New Blog Post', new_blog_post_path if user_signed_in? %>
 
 <table>
-    <% @blog_posts.each do |blog_post| %>
+    <% @records.each do |blog_post| %>
         <tr>
             <% if user_signed_in? %>
                 <td>
@@ -22,3 +22,6 @@
         </tr>
     <% end %>
 </table>
+<div class="my-16">
+    <%== pagy_nav(@pagy) if @pagy.pages > 1 %>
+</div>
