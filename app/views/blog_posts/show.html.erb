@@ -1,4 +1,6 @@
 <h1><%= @blog_post.title %></h1>
 <p><%= @blog_post.content %></p>
 
+<%= image_tag @blog_post.cover_image if @blog_post.cover_image.present? %>
+
 <%= link_to 'Edit', edit_blog_post_path(@blog_post) %> | <%= link_to 'Back', root_path %>
